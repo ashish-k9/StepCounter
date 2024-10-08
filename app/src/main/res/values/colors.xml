@@ -7,6 +7,19 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="button_color">#55c2da</color>
-    <color name="green_hue">#5dbea3</color>
+
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="material_dynamic_primary0">#6200EE</color>
+
+
+    <color name="background_color">#FFFFFF</color> <!-- Main background color -->
+    <color name="primary_text">#000000</color> <!-- Primary text color -->
+    <color name="secondary_text">#757575</color> <!-- Secondary text color -->
+    <color name="button_color">#6200EE</color> <!-- Primary button color -->
+    <color name="accent_color">#FF4081</color> <!-- Accent color -->
+    <color name="green_hue">#4CAF50</color> <!-- Green button color -->
+    <color name="colorAccent">#FF4081</color> <!-- Deprecated, use accent_color instead -->
+
+
 </resources>

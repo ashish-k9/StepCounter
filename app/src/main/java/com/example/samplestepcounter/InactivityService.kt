@@ -5,17 +5,24 @@ import android.content.Intent
 import android.os.Handler
 import android.os.IBinder
 import android.os.Looper
+import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 
 class InactivityService : Service() {
     private lateinit var handler: Handler
+    private var lastStepUpdateTime: Long = System.currentTimeMillis()
+
     private val checkInactivity = object : Runnable {
         override fun run() {
-            // Check if the user has been inactive for a certain period (e.g., 30 minutes)
-            // Send notification if inactive
-            // This logic needs to be implemented
-            handler.postDelayed(this, 1800000) // 30 minutes
+            val currentTime = System.currentTimeMillis()
+            Log.d("InactivityService", "Checking inactivity...")
+
+            // Check if the user has been inactive for, say, 30 minutes (1800000 milliseconds)
+            if (currentTime - lastStepUpdateTime > 180000) { // 30 minutes
+                sendNotification()
+            }
+            handler.postDelayed(this, 60000) // Check every minute
         }
     }
 
@@ -25,6 +32,9 @@ class InactivityService : Service() {
         return START_STICKY
     }
 
+    fun updateLastStepUpdateTime() {
+        lastStepUpdateTime = System.currentTimeMillis()
+    }
     private fun sendNotification() {
         val notificationBuilder = NotificationCompat.Builder(this, "activity_channel")
             .setSmallIcon(R.drawable.ic_launcher_foreground) // Replace with your icon
