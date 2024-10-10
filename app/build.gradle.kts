@@ -69,7 +69,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation (libs.androidx.core) // For notifications
-    implementation ("com.google.android.material:material:1.8.0")// or the latest version
+    implementation ("com.google.android.material:material:1.8.0")
+
 
 
 }

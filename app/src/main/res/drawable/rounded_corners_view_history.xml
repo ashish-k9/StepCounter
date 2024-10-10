@@ -1,0 +1,14 @@
+<!-- res/drawable/rounded_button_mint.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#26C6DA" /> <!-- Background fallback color -->
+    <corners android:radius="12dp" />
+    <gradient
+        android:angle="90"
+        android:startColor="#66BB6A"
+        android:endColor="#26A69A" /> <!-- Light Green to Teal gradient -->
+    <padding
+        android:left="16dp"
+        android:right="16dp"
+        android:top="12dp"
+        android:bottom="12dp" />
+</shape>
